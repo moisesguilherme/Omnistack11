@@ -61,7 +61,7 @@ export default function Incidents() {
 
             <FlatList 
                 data={incidents}
-                style={styles.incidentsList}
+                style={styles.incidentList}
                 keyExtractor={incident => String(incident.id)}
                 showsVerticalScrollIndicator={false}
                 onEndReached={loadIncidents}
@@ -83,16 +83,16 @@ export default function Incidents() {
                         </Text>
 
                         <TouchableOpacity        
-                            sytle={styles.detailsButton}
+                            style={styles.detailsButton}
                             onPress={() => navigationToDetail(incident)}
                         >
                             <Text style={styles.detailsButtonText}>Ver mais detalhes</Text>
                             <Feather name="arrow-right" size={16} color="#E02041" />
                         </TouchableOpacity>
+
                     </View>
                 )}
             />
-
         </View>
     );
 }
